@@ -2,11 +2,21 @@ import React from "react";
 // import PropTypes from "prop-types";
 import Button from "./Button";
 
-export default function Header({ title = "Task Tracker as default" }) {
+export default function Header({
+  title = "Task Tracker as default",
+  toggleShow,
+  isTaskBarVisible,
+}) {
   return (
     <header className="header">
       <h1>{title}</h1>
-      <Button color="purple" text="Show Create a Task Bar" />
+      <Button
+        color={isTaskBarVisible ? "steelblue" : "purple"}
+        text={
+          isTaskBarVisible ? "Hide Create a Task Bar" : "Show Create a Task Bar"
+        }
+        toggleShow={toggleShow}
+      />
     </header>
   );
 }
