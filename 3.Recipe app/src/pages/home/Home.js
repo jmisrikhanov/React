@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../components/header/Header";
 import axios from "axios";
+import { MainContainer } from "./HomeStyle";
+import RecipeCardComp from "./RecipeCardComp";
 
 const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snack", "Teatime"];
 const APP_ID = "9276aa1a";
@@ -18,6 +20,7 @@ const Home = () => {
       const result = await axios.get(url);
       //   console.log("result: ", result);
       if (result.status === 200) {
+        // console.log(result.data.hits);
         setRecipes(result.data.hits);
       } else {
         alert("Please fill the form");
@@ -25,9 +28,9 @@ const Home = () => {
     }
   };
 
-  useEffect(() => {
-    getData();
-  }, []);
+  //   useEffect(() => {
+  //     getData();
+  //   }, []);
 
   return (
     <div>
@@ -35,9 +38,18 @@ const Home = () => {
         setQuery={setQuery}
         query={query}
         getData={getData}
+        mealTypes={mealTypes}
         setMeal={setMeal}
         meal={meal}
       />
+
+      {recipes ? (
+        <MainContainer>
+          {recipes?.map((recipe, index) => (
+            <RecipeCardComp key={index} recipe={recipe?.recipe} />
+          ))}
+        </MainContainer>
+      ) : null}
     </div>
   );
 };
