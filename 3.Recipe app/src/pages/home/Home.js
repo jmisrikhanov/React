@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../components/header/Header";
 import axios from "axios";
-import { MainContainer } from "./HomeStyle";
+import { MainContainer, HomeImg, ImgDiv } from "./HomeStyle";
 import RecipeCardComp from "./RecipeCardComp";
+import homeSvg from "../../assets/home.svg";
 
 const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snack", "Teatime"];
 const APP_ID = "9276aa1a";
@@ -49,7 +50,11 @@ const Home = () => {
             <RecipeCardComp key={index} recipe={recipe?.recipe} />
           ))}
         </MainContainer>
-      ) : null}
+      ) : (
+        <ImgDiv>
+          <HomeImg src={homeSvg} />
+        </ImgDiv>
+      )}
     </div>
   );
 };
