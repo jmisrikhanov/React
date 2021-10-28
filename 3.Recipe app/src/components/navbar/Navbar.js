@@ -15,7 +15,13 @@ const Navbar = () => {
       </Hamburger>
       <Menu isOpen={isOpen}>
         <MenuLink to="/about">About</MenuLink>
-        <MenuLink to="#">Github</MenuLink>
+        <MenuLink
+          to={{ pathname: "https://github.com/jmisrikhanov" }}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Github
+        </MenuLink>
         <MenuLink to="login">Logout</MenuLink>
       </Menu>
     </Nav>
