@@ -17,7 +17,7 @@ const RecipeCardComp = ({ recipe }) => {
   return (
     <RecipeCard>
       <RecipeHeader>{recipe?.label}</RecipeHeader>
-      <RecipeImage src={recipe?.image ?? defaultImg} />
+      <RecipeImage src={recipe?.image || defaultImg} />
       <Button onClick={moreClick}>View More</Button>
     </RecipeCard>
   );

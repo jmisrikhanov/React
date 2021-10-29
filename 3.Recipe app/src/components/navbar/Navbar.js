@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { Hamburger, Logo, Menu, MenuLink, Nav } from "./NavbarStyle";
 
 const Navbar = () => {
-  const [isOpen, setisOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <Nav>
       <Logo to="/">
         <i>{"Recipes"}</i>
       </Logo>
-      <Hamburger onClick={() => setisOpen(!isOpen)}>
+      <Hamburger onClick={() => setIsOpen(!isOpen)}>
         <span />
         <span />
         <span />

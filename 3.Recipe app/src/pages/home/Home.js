@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "../../components/header/Header";
 import axios from "axios";
 import { MainContainer, HomeImg, ImgDiv } from "./HomeStyle";
@@ -10,7 +10,7 @@ const APP_ID = "9276aa1a";
 const APP_KEY = "73d7d54218655b2be3e0ffcc764fc8ad";
 
 const Home = () => {
-  const [query, setQuery] = useState("apple");
+  const [query, setQuery] = useState("pizza");
   const [recipes, setRecipes] = useState();
   const [meal, setMeal] = useState(mealTypes[0].toLowerCase());
 
