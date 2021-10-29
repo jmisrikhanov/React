@@ -6,8 +6,11 @@ import RecipeCardComp from "./RecipeCardComp";
 import homeSvg from "../../assets/home.svg";
 
 const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snack", "Teatime"];
-const APP_ID = "9276aa1a";
-const APP_KEY = "73d7d54218655b2be3e0ffcc764fc8ad";
+// const APP_ID = "9276aa1a";
+// const APP_KEY = "73d7d54218655b2be3e0ffcc764fc8ad";
+
+const APP_ID = process.env.REACT_APP_APP_ID;
+const APP_KEY = process.env.REACT_APP_APP_KEY;
 
 const Home = () => {
   const [query, setQuery] = useState("pizza");
