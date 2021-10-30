@@ -1,15 +1,15 @@
-import React from "react";
+import Img from "../../assets/logo.svg";
 import styled from "styled-components/macro";
-import Img from "../assets/logo.svg";
 import { Link } from "react-router-dom";
 
-const NavbarContainer = styled.div`
+export const NavbarContainer = styled.div`
   width: 100%;
   height: 80px;
   z-index: 20;
   background: #fff;
 `;
-const NavbarWrap = styled.div`
+
+export const NavbarWrap = styled.div`
   width: 1200px;
   height: 100%;
   margin: 0 auto;
@@ -19,19 +19,22 @@ const NavbarWrap = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
-const Logo = styled.div`
+
+export const Logo = styled.div`
   width: 128px;
   height: 22px;
   background: url(${Img}) 0 45% no-repeat;
   background-size: 100% 100%;
   cursor: pointer;
 `;
-const Nav = styled.nav`
+
+export const Nav = styled.nav`
   flex: 1;
   position: relative;
   padding: 50px;
 `;
-const NavLink = styled(Link)`
+
+export const NavLink = styled(Link)`
   color: #000;
   padding: 0 15px;
   font-size: 16px;
@@ -39,11 +42,13 @@ const NavLink = styled(Link)`
   font-weight: 700;
   text-decoration: none;
 `;
-const Search = styled.div`
+
+export const Search = styled.div`
   right: 235px;
   position: absolute;
 `;
-const SearchWrap = styled.div`
+
+export const SearchWrap = styled.div`
   width: 220px;
   height: 36px;
   position: relative;
@@ -53,7 +58,8 @@ const SearchWrap = styled.div`
   padding-left: 37px;
   border-radius: 19px;
 `;
-const Input = styled.input`
+
+export const Input = styled.input`
   color: #000;
   width: 196px;
   border: transparent;
@@ -65,12 +71,14 @@ const Input = styled.input`
     color: #d1d8de;
   }
 `;
-const ButtonContainer = styled.div`
+
+export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
 `;
-const Button = styled.div`
+
+export const Button = styled.div`
   width: 110px;
   color: #fff;
   cursor: pointer;
@@ -82,39 +90,3 @@ const Button = styled.div`
   line-height: 36px;
   border-radius: 21px;
 `;
-
-const Navbar = () => {
-  return (
-    <NavbarContainer>
-      <NavbarWrap>
-        <Logo />
-        <Nav>
-          <NavLink to="/">HOME</NavLink>
-          <NavLink to="/">MARKET</NavLink>
-          <NavLink to="/">TRADE</NavLink>
-          <NavLink to="/">PRICING</NavLink>
-          <NavLink to="/">DOWNLOAD</NavLink>
-          <NavLink to="/">HELP</NavLink>
-        </Nav>
-        <Search>
-          <SearchWrap>
-            <Input type="text" placeholder="Symbol/Name" />
-          </SearchWrap>
-        </Search>
-        <ButtonContainer>
-          <Button
-            css={`
-              color: #037cff;
-              background: #fff;
-            `}
-          >
-            SIGN UP
-          </Button>
-          <Button>LOG IN</Button>
-        </ButtonContainer>
-      </NavbarWrap>
-    </NavbarContainer>
-  );
-};
-
-export default Navbar;
