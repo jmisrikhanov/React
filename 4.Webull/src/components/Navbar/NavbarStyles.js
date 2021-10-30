@@ -78,7 +78,20 @@ export const ButtonContainer = styled.div`
   justify-content: flex-end;
 `;
 
-export const Button = styled.div`
+export const Button1 = styled.div`
+  color: #037cff;
+  background: #fff;
+  width: 110px;
+  cursor: pointer;
+  height: 36px;
+  font-size: 16px;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 21px;
+`;
+
+export const Button2 = styled.div`
   width: 110px;
   color: #fff;
   cursor: pointer;

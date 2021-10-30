@@ -1,8 +1,8 @@
 import React from "react";
-import styled from "styled-components/macro";
 
 import {
-  Button,
+  Button1,
+  Button2,
   ButtonContainer,
   Input,
   Logo,
@@ -33,15 +33,15 @@ const Navbar = () => {
           </SearchWrap>
         </Search>
         <ButtonContainer>
-          <Button
+          <Button1
             css={`
               color: #037cff;
               background: #fff;
             `}
           >
             SIGN UP
-          </Button>
-          <Button>LOG IN</Button>
+          </Button1>
+          <Button2>LOG IN</Button2>
         </ButtonContainer>
       </NavbarWrap>
     </NavbarContainer>
