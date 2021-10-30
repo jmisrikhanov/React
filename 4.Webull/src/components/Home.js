@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import img from "../assets/img1.png";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Section = styled.section`
   background-image: url(${img});
@@ -62,6 +63,7 @@ const Hero = () => {
           </Desc>
           <Button href="https://bit.ly/webull-join" target="_blank">
             <span>Claim your free stocks now</span>
+            <MdKeyboardArrowRight />
           </Button>
         </Left>
       </Content>
