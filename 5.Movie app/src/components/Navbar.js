@@ -6,7 +6,7 @@ import { Logout } from "../auth/firebase";
 const Navbar = () => {
   const history = useHistory();
   // const currentUser = { displayName: "Javid" };
-  const currentUser = useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
 
   return (
     <div>
