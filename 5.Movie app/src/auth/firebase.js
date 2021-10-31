@@ -71,7 +71,7 @@ export const Logout = async () => {
 export const SignUpProvider = async () => {
   var provider = new firebase.auth.GoogleAuthProvider();
   provider.setCustomParameters({
-    promt: "select_account",
+    prompt: "select_account",
   });
 
   firebase.auth().signInWithPopup(provider);
