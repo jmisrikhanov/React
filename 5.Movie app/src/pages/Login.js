@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { SignIn } from "../auth/firebase";
+import { SignIn, SignUpProvider } from "../auth/firebase";
 
 const Login = () => {
   const history = useHistory();
@@ -11,6 +11,7 @@ const Login = () => {
 
   const handleSignIn = () => {
     SignIn(email, password);
+    history.push("/");
   };
 
   return (
@@ -49,7 +50,10 @@ const Login = () => {
             onClick={handleSignIn}
           />
         </form>
-        <button className="btn btn-primary form-control" onClick={null}>
+        <button
+          className="btn btn-primary form-control"
+          onClick={() => SignUpProvider()}
+        >
           Continue with Google
         </button>
       </div>

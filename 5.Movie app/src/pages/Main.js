@@ -29,9 +29,11 @@ const Main = () => {
   const handleSearch = (e) => {
     e.preventDefault();
 
-    if (searchTerm) {
+    if (searchTerm && currentUser) {
       getMovies(SEARCH_API + searchTerm);
       setSearchTerm("");
+    } else {
+      alert("Please login to search a movie...");
     }
   };
 
@@ -47,7 +49,7 @@ const Main = () => {
       </form>
       <div className="movie-container">
         {movies.map((movie) => (
-          <MovieCard key={movie.id} {...movie} />
+          <MovieCard key={movie.id} {...movie} currentUser={currentUser} />
         ))}
       </div>
     </AuthContext.Provider>
