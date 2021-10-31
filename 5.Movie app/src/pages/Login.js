@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { SignIn } from "../auth/firebase";
 
 const Login = () => {
   const history = useHistory();
@@ -7,6 +8,10 @@ const Login = () => {
   console.log("email", email);
   const [password, setPassword] = useState("");
   console.log("password", password);
+
+  const handleSignIn = () => {
+    SignIn(email, password);
+  };
 
   return (
     <div className="register">
@@ -41,7 +46,7 @@ const Login = () => {
             type="button"
             className="btn btn-primary form-control"
             value="Login"
-            onClick={null}
+            onClick={handleSignIn}
           />
         </form>
         <button className="btn btn-primary form-control" onClick={null}>

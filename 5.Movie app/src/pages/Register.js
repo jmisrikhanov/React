@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { createUser } from "../auth/firebase";
 
 const Register = () => {
   const history = useHistory();
@@ -7,6 +8,10 @@ const Register = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const handleRegister = () => {
+    createUser(email, password);
+  };
 
   return (
     <div className="register">
@@ -68,7 +73,7 @@ const Register = () => {
             type="button"
             className="btn btn-primary form-control"
             value="Register"
-            onClick={null}
+            onClick={handleRegister}
           />
         </form>
         <button className="btn btn-primary form-control" onClick={null}>
