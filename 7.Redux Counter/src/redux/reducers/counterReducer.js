@@ -1,4 +1,3 @@
-import React from "react";
 import {
   INCREASE_COUNTER,
   DECREASE_COUNTER,
