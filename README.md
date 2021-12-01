@@ -7,4 +7,6 @@
 #6.Breaking bad \
 #7.Redux counter \
 #8.Form validation using custom hooks \
-#9.Redux Todo
+#9.Redux Todo \
+#10.Language cards \
+#11.CRUD table using Ant design
