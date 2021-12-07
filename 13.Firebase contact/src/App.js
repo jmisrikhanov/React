@@ -10,10 +10,19 @@ function App() {
   const [info, setInfo] = useState(initialState);
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    addInfo(info);
+
+    if (info?.id) {
+      editHandler(info);
+    } else {
+      addInfo(info);
+    }
+    setInfo(initialState);
+
+    // console.log("info :>> ", info);
+    // addInfo(info);
   };
 
-  const updateFormHandler = () => {
+  const updateFormHandler = (item) => {
     setInfo({ ...item });
   };
 
@@ -25,7 +34,7 @@ function App() {
         info={info}
         setInfo={setInfo}
       />
-      <Contacts />
+      <Contacts className="contacts" updateFormHandler={updateFormHandler} />
       <ToastContainer />
     </div>
   );
