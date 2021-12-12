@@ -6,7 +6,7 @@ const LaptopComp = (props) => {
   console.log(props);
   return (
     <div className="container">
-      <h2>Laptops [Pure Index]</h2>
+      <h2>Laptops [Pure Redux]</h2>
       <h3>
         Number of Laptops :
         <span className="number">{props.numberOfLaptops}</span>
