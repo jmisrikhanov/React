@@ -11,6 +11,6 @@
 #10.Language cards \
 #11.CRUD table using Ant design \
 #12.CRUD table using Bootsrap \
-#13.Firebase contact app \ 
-#14.Redux thunk user \ 
+#13.Firebase contact app\
+#14.Redux thunk user\
 #15.Redux shop
